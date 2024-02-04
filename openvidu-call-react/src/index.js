@@ -7,4 +7,4 @@ import registerServiceWorker from './registerServiceWorker';
 ReactDOM.render(
   <VideoRoomComponent />, document.getElementById('root')
 );
-registerServiceWorker();
+// registerServiceWorker();

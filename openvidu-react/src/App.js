@@ -4,9 +4,10 @@ import axios from 'axios';
 import React, { Component } from 'react';
 import './App.css';
 import UserVideoComponent from './UserVideoComponent';
+import ChatComponent from './chat/ChatComponent';
 
 // 버전 충돌나면 export NODE_OPTIONS=--openssl-legacy-provider 이거 쉘에 입력하기
-const OPENVIDU_SERVER_URL = '모게요';
+const OPENVIDU_SERVER_URL = 'https://쉿';
 const OPENVIDU_SERVER_SECRET = 'MALITELL'
 class App extends Component {
     constructor(props) {
@@ -292,7 +293,7 @@ class App extends Component {
 
                             </div>
                         ) : null} */}
-                        <div id="video-container" className="col-md-6">
+                        <div id="video-container" className="col-md-9">
                             {this.state.publisher !== undefined ? (
                                 <div className="stream-container col-md-6 col-xs-6" onClick={() => this.handleMainVideoStream(this.state.publisher)}>
                                     <UserVideoComponent
@@ -305,6 +306,10 @@ class App extends Component {
                                     <UserVideoComponent streamManager={sub} />
                                 </div>
                             ))}
+                        </div>
+                        <div id="chat-container" className="col-md-3">
+                            <ChatComponent user={this.state.publisher}/>
+                            chat
                         </div>
                     </div>
                 ) : null}

@@ -57,7 +57,7 @@
   }
   
   .msg-detail {
-    width: calc(100% - 10px);
+    width: calc(100% - 65px);
     display: inline-block;
   }
   
@@ -104,7 +104,7 @@
   }
   
   .message.left .msg-detail {
-    padding-left: 10px;
+    padding-left: 65px;
   }
   
   .message.left .user-img {
